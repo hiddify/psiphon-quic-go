@@ -1,4 +1,4 @@
-on: [push, pull_request]
+# on: [push, pull_request]
 
 jobs:
   integration:
@@ -75,4 +75,4 @@ jobs:
         with:
           name: qlogs-${{ matrix.os }}-go${{ matrix.go }}-race${{ matrix.race }}${{ matrix.use32bit && '-32bit' || '' }}
           path: integrationtests/self/*.qlog
-          retention-days: 7
+          retention-days: 1
